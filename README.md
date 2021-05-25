@@ -9,3 +9,36 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+## plan
+1) make folders where for each page
+login.js todo.js signup.js (add to correct folder)
+
+## HTML
+1) welcome page 'main'
+    add links to login page, todo list, and signup page
+    
+
+### signup
+1) add 2 inputs and one button to submit 
+
+### login
+1) add 2 inputs and one button to submit 
+
+### todo list
+1) add ul(list of todos) so we can append, h1(todo page), h3(name), and inpput and button(submit) another button (logout)
+
+## JAVASCRIPT!!!!!!!
+1) write utils functions (findById, getUser, setUser, getCurrentUser)
+
+2) write local-storage functions (createUser, loginUser, saveUser, logOut, toggleTodo, createTodo)
+
+
+
+
+
+
+
+
+
+   
+
