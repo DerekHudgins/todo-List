@@ -18,6 +18,8 @@ export function getUser(username) {
 }
 
 export function getCurrentUser() {
-    const user = getUser(username);
-    const currentUser = localStorage.getItem(CURRENT);
+    const currentUser = localStorage.getItem('CURRENT');
+    const user = getUser(currentUser);
+    
+    return user;
 }
