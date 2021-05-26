@@ -12,7 +12,6 @@ export function createUser(username, password) {
         };
         setUser(user);
         loginUser(username, password);
-        console.log(user, 'user');
     }
 }
 

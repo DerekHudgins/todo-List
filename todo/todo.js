@@ -15,6 +15,7 @@ const user = getCurrentUser();
 logoutButton.addEventListener('click', () => {
 
     logout();
+    window.location = '../';
 });
 
 // console.log(user);
