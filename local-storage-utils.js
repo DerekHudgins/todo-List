@@ -1,6 +1,6 @@
 import { getUser, setUser } from './utils.js';
 
-
+const CURRENT = 'CURRENT';
 export function createUser(username, password) {
     if (localStorage.getItem(username)) {
         alert('this username already exists');
@@ -12,6 +12,7 @@ export function createUser(username, password) {
         };
         setUser(user);
         loginUser(username, password);
+        console.log(user, 'user');
     }
 }
 
@@ -21,8 +22,8 @@ export function loginUser(username, password) {
     
     if (user) {
         if (user.password === password) {
-            localStorage.setItem('CURRENT', user.username);
-            setUser(user);
+            localStorage.setItem(CURRENT, username);
+            
             // window.location = '../todo';
         } else {
             alert('username and/or password is incorrect');
