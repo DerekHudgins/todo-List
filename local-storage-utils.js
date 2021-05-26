@@ -1,4 +1,4 @@
-import { getCurrentUser, getUser, setUser } from './utils.js';
+import { getCurrentUser, getUser, setUser, findById } from './utils.js';
 
 const CURRENT = 'CURRENT';
 export function createUser(username, password) {
@@ -39,18 +39,18 @@ export function logout() {
 
 export function createToDo(message) {
     
-    const currentUser = getCurrentUser();
-    const user = getUser(currentUser.username);
-    
+    const user = getCurrentUser();
     const toDo = {
         id: Math.floor(Math.random() * 99999),
         message: message,
         completed: false
     };
-
     user.todo.push(toDo);
+    setUser(user);
 }
 
-export function toggleToDo() {
-
+export function toggleToDo(id) {
+    const user = getCurrentUser();
+    const something = findById(user.todo, id);
+    !something.completed;
 }

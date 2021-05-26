@@ -21,6 +21,5 @@ export function getUser(username) {
 export function getCurrentUser() {
     const currentUser = localStorage.getItem(CURRENT);
     const user = getUser(currentUser);
-    
     return user;
 }
