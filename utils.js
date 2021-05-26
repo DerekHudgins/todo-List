@@ -1,3 +1,4 @@
+const CURRENT = 'CURRENT';
 export function findById(someArr, id) {
     for (let item of someArr) {
         if (item.id === id) {
@@ -8,7 +9,7 @@ export function findById(someArr, id) {
 
 export function setUser(user) {
     const stringyUser = JSON.stringify(user);
-    localStorage.set(user.username, stringyUser);
+    localStorage.setItem(user.username, stringyUser);
 }
 
 export function getUser(username) {
@@ -18,7 +19,7 @@ export function getUser(username) {
 }
 
 export function getCurrentUser() {
-    const currentUser = localStorage.getItem('CURRENT');
+    const currentUser = localStorage.getItem(CURRENT);
     const user = getUser(currentUser);
     
     return user;
