@@ -1,5 +1,5 @@
 import { logout, toggleToDo, createToDo } from '../local-storage-utils.js';
-import { getCurrentUser, getUser } from '../utils.js';
+import { getCurrentUser } from '../utils.js';
 
 
 
@@ -17,29 +17,33 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-createToDoButton.addEventListener('click', () => {
- 
-    createToDo(toDoText.value);
+// console.log(user);
 
-    renderToDo();
-    console.log(renderToDo());
-});
-
-renderToDo();
 
 function renderToDo() {
+    // ul.textContent = '';
     user.todo.forEach(todo => {
         const li = document.createElement('li');
         const message = todo.message;
         li.textContent = message;
+        // console.log(todo.completed);
         if (todo.completed) {
             li.style.textDecoration = 'line-through';
-        };
+        }
         li.addEventListener('click', () => {
             toggleToDo(todo.id);
-        })
+            window.location = '';
+        });
         ul.append(li);
-    })
+    });
 }
 
+createToDoButton.addEventListener('click', () => {
+    ul.textContent = '';
+    createToDo(toDoText.value);
 
+    renderToDo();
+    window.location = './';
+});
+
+renderToDo();

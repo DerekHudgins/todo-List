@@ -52,5 +52,8 @@ export function createToDo(message) {
 export function toggleToDo(id) {
     const user = getCurrentUser();
     const something = findById(user.todo, id);
-    !something.completed;
+    if (something) {
+        something.completed = !something.completed;
+        setUser(user);
+    }
 }
