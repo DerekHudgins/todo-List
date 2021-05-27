@@ -20,7 +20,9 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url('https://previews.123rf.com/images/brigada915/brigada9152007/brigada915200700224/152043931-notebook-paper-background-yellow-lined-paper-vector-illustration.jpg') ;
 }
+ 
 
 main {
     display: flex;
@@ -28,6 +30,21 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+}
+
+.text {
+background-color: #fcfc66;
+border: solid 1px rgb(81, 229, 255);
+font-size: 2em;
+color: blue;
+}
+
+
+
+li {
+
+font-size: 2.6em;
+color: blue;
 }
 
 section {
@@ -38,11 +55,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    text-align: center;
+   
 }
 
 header {
